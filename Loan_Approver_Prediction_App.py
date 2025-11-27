@@ -138,7 +138,7 @@ with tab1:
         else:
             explanation += "❌ Low income. "
 
-        if loan_amount < 120:
+        if loan_amount < 50000:
             explanation += "✔ Loan amount is affordable. "
         else:
             explanation += "❌ High loan amount compared to income. "
@@ -217,7 +217,7 @@ with tab2:
             else:
                 exp += "❌ Low income. "
 
-            if row["LoanAmount"] < 120:
+            if row["LoanAmount"] < 50000:
                 exp += "✔ Low loan amount. "
             else:
                 exp += "❌ Higher loan amount. "
@@ -252,3 +252,4 @@ with tab2:
         )
 
     st.markdown('</div>', unsafe_allow_html=True)
+
