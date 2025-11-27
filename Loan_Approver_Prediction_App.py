@@ -154,7 +154,7 @@ with tab1:
         st.markdown("### 🟦 Prediction Result")
         st.markdown(badge_html, unsafe_allow_html=True)
 
-        st.metric(label="Confidence Level", value=f"{prob:.2f}%")
+        # st.metric(label="Confidence Level", value=f"{prob:.2f}%")
         st.info(f"📝 **Reason:** {explanation}")
 
     st.markdown('</div>', unsafe_allow_html=True)
@@ -197,7 +197,7 @@ with tab2:
 
         # Add to bulk df
         df_bulk["Loan_Status_Prediction"] = decision_text
-        df_bulk["Confidence (%)"] = (probs.max(axis=1) * 100).round(2)
+        #df_bulk["Confidence (%)"] = (probs.max(axis=1) * 100).round(2)
 
         # Explanations for each prediction
         explanations = []
@@ -252,4 +252,5 @@ with tab2:
         )
 
     st.markdown('</div>', unsafe_allow_html=True)
+
 
